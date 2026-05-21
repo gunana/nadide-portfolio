@@ -379,6 +379,13 @@ em { font-style: italic; color: var(--terra); }
   border-top: 1px solid var(--cream-dark);
 }
 .stat { display: flex; flex-direction: column; }
+.stat-icon {
+  font-size: 2rem;
+  color: var(--terra);
+  line-height: 1;
+  display: block;
+  margin-bottom: .4rem;
+}
 .stat-n {
   font-family: var(--f-display);
   font-size: 2.8rem;
