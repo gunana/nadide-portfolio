@@ -24,7 +24,7 @@
 
 <meta
   property="og:image"
-  content="https://nadidebaykan.com/preview.png"
+  content="https://nadidebaykan.com/preview.jpg"
 >
 
 <meta
@@ -34,12 +34,12 @@
 
 <meta property="og:type" content="website">
 
-<link rel="icon" type="image/png" href="https://pub-280b7d3405694afabe6905c6540d3543.r2.dev/favicon.png">
+<link rel="icon" type="image/png" href="favicon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 
@@ -48,6 +48,15 @@
 <body>
 
 <div class="noise"></div>
+<div class="cursor"></div>
+
+<div class="loader" id="loader">
+
+  <div class="loader-logo">
+    N.
+  </div>
+
+</div>
 
 <nav class="nav">
 
@@ -88,6 +97,8 @@
 </nav>
 
 <section class="hero">
+
+  <div class="hero-grid"></div>
 
   <div class="hero-bg-text">
     NADIDE
@@ -198,67 +209,27 @@
     <div class="skills-grid">
 
       <div class="skill-card">
-
-        <span class="skill-icon">
-          ◈
-        </span>
-
-        <h3>
-          Görsel Kimlik
-        </h3>
-
-        <p>
-          Logo sistemleri ve marka rehberleri.
-        </p>
-
+        <span class="skill-icon">◈</span>
+        <h3>Görsel Kimlik</h3>
+        <p>Logo sistemleri ve marka rehberleri.</p>
       </div>
 
       <div class="skill-card">
-
-        <span class="skill-icon">
-          ✦
-        </span>
-
-        <h3>
-          Tipografi
-        </h3>
-
-        <p>
-          Editorial düzen ve görsel ritim.
-        </p>
-
+        <span class="skill-icon">✦</span>
+        <h3>Tipografi</h3>
+        <p>Editorial düzen ve görsel ritim.</p>
       </div>
 
       <div class="skill-card">
-
-        <span class="skill-icon">
-          ◎
-        </span>
-
-        <h3>
-          Baskı Tasarımı
-        </h3>
-
-        <p>
-          Poster ve yayın tasarımları.
-        </p>
-
+        <span class="skill-icon">◎</span>
+        <h3>Baskı Tasarımı</h3>
+        <p>Poster ve yayın tasarımları.</p>
       </div>
 
       <div class="skill-card">
-
-        <span class="skill-icon">
-          ✺
-        </span>
-
-        <h3>
-          Adobe Suite
-        </h3>
-
-        <p>
-          Illustrator, Photoshop ve InDesign.
-        </p>
-
+        <span class="skill-icon">✺</span>
+        <h3>Adobe Suite</h3>
+        <p>Illustrator, Photoshop ve InDesign.</p>
       </div>
 
     </div>
@@ -293,26 +264,10 @@
 
           <img
             src="https://pub-280b7d3405694afabe6905c6540d3543.r2.dev/AB45C2ED-53A6-44A3-8D49-6822D9C24FD8.png"
-            alt="Marka Kimliği Projesi"
+            alt="Marka Kimliği"
           >
 
         </a>
-
-        <div class="work-info">
-
-          <span class="work-category">
-            Görsel Kimlik
-          </span>
-
-          <h3>
-            Marka Kimliği
-          </h3>
-
-          <p>
-            Logo sistemi & görsel yönlendirme
-          </p>
-
-        </div>
 
       </article>
 
@@ -325,26 +280,10 @@
 
           <img
             src="https://pub-280b7d3405694afabe6905c6540d3543.r2.dev/IMG_0277.jpeg"
-            alt="Editorial Poster"
+            alt="Poster Tasarımı"
           >
 
         </a>
-
-        <div class="work-info">
-
-          <span class="work-category">
-            Tipografi
-          </span>
-
-          <h3>
-            Editorial Poster
-          </h3>
-
-          <p>
-            Tipografi sistemi & poster serisi
-          </p>
-
-        </div>
 
       </article>
 
@@ -361,22 +300,6 @@
           >
 
         </a>
-
-        <div class="work-info">
-
-          <span class="work-category">
-            Dijital
-          </span>
-
-          <h3>
-            Kampanya Tasarımı
-          </h3>
-
-          <p>
-            Sosyal medya kampanya tasarımı
-          </p>
-
-        </div>
 
       </article>
 
@@ -428,46 +351,16 @@
 
     <div class="social-links">
 
-      <a
-        href="https://linkedin.com"
-        target="_blank"
-        aria-label="LinkedIn"
-      >
-
-        <svg viewBox="0 0 24 24" fill="none">
-
-          <path d="M6.94 8.5H3.56V20H6.94V8.5ZM5.25 3C4.17 3 3.5 3.72 3.5 4.66C3.5 5.58 4.15 6.31 5.2 6.31H5.22C6.33 6.31 7 5.58 7 4.66C6.98 3.72 6.33 3 5.25 3ZM20.5 12.65C20.5 9.16 18.64 7.54 16.15 7.54C14.14 7.54 13.24 8.66 12.74 9.45V8.5H9.37C9.41 9.13 9.37 20 9.37 20H12.74V13.58C12.74 13.24 12.77 12.9 12.87 12.66C13.14 11.99 13.76 11.3 14.8 11.3C16.16 11.3 16.7 12.35 16.7 13.88V20H20.08V13.49C20.08 13.14 20.07 12.88 20.5 12.65Z"/>
-
-        </svg>
-
+      <a href="https://linkedin.com" target="_blank">
+        LinkedIn
       </a>
 
-      <a
-        href="https://instagram.com"
-        target="_blank"
-        aria-label="Instagram"
-      >
-
-        <svg viewBox="0 0 24 24" fill="none">
-
-          <path d="M7 2H17C19.76 2 22 4.24 22 7V17C22 19.76 19.76 22 17 22H7C4.24 22 2 19.76 2 17V7C2 4.24 4.24 2 7 2ZM12 7C9.24 7 7 9.24 7 12C7 14.76 9.24 17 12 17C14.76 17 17 14.76 17 12C17 9.24 14.76 7 12 7ZM18 5.5C17.17 5.5 16.5 6.17 16.5 7C16.5 7.83 17.17 8.5 18 8.5C18.83 8.5 19.5 7.83 19.5 7C19.5 6.17 18.83 5.5 18 5.5Z"/>
-
-        </svg>
-
+      <a href="https://instagram.com" target="_blank">
+        Instagram
       </a>
 
-      <a
-        href="https://pinterest.com"
-        target="_blank"
-        aria-label="Pinterest"
-      >
-
-        <svg viewBox="0 0 24 24" fill="none">
-
-          <path d="M12.04 2C6.6 2 4 5.9 4 10.16C4 12.7 5.43 15.87 7.73 16.88C8.11 17.05 8.31 16.97 8.42 16.6C8.5 16.33 8.68 15.62 8.76 15.31C8.87 14.93 8.83 14.8 8.58 14.5C7.22 12.89 6.35 10.84 6.35 8.88C6.35 5.84 8.62 3.12 12.8 3.12C16.49 3.12 18.52 5.38 18.52 8.4C18.52 12.39 16.76 15.75 14.14 15.75C12.7 15.75 11.62 14.56 11.96 13.1C12.37 11.36 13.16 9.48 13.16 8.22C13.16 7.09 12.55 6.14 11.29 6.14C9.8 6.14 8.6 7.68 8.6 9.74C8.6 11.05 9.04 11.93 9.04 11.93L7.25 19.5C6.92 20.91 7.2 22.62 7.33 23C7.41 23.23 7.66 23.3 7.81 23.12C8.03 22.86 10.8 19.41 11.62 16.21C11.86 15.28 12.99 16.13 14.24 16.13C18.68 16.13 21.68 12.08 21.68 8.02C21.68 4.21 18.45 2 12.04 2Z"/>
-
-        </svg>
-
+      <a href="https://pinterest.com" target="_blank">
+        Pinterest
       </a>
 
     </div>
@@ -549,13 +442,22 @@ lightbox.addEventListener('click', e => {
 
 });
 
-document.addEventListener('keydown', e => {
+window.addEventListener('load', () => {
 
-  if(e.key === 'Escape'){
+  setTimeout(() => {
 
-    closeLightbox();
+    document.getElementById('loader').classList.add('hide');
 
-  }
+  }, 900);
+
+});
+
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
 
 });
 
