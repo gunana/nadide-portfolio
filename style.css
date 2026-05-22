@@ -120,7 +120,7 @@ em { font-style: italic; color: var(--terra); }
 .btn-big {
   font-size: 1rem;
   padding: 1.1rem 3rem;
-  text-transform: lowercase;
+  text-transform: lowercase; /* Forces email address to be lowercase */
 }
 
 /* ── NAV ── */
@@ -343,12 +343,10 @@ em { font-style: italic; color: var(--terra); }
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Keeps image uncropped and fully visible */
   object-position: center;
-  transition: transform .5s var(--ease-out);
   background: #1e1c1a;
 }
-.work-card:hover .work-img img { transform: scale(1.04); }
 
 /* ── ABOUT ── */
 .about { background: var(--white); }
@@ -499,11 +497,10 @@ em { font-style: italic; color: var(--terra); }
   margin-bottom: 1.2rem;
   overflow: hidden;
   position: relative;
-  transition: transform .5s var(--ease-out);
+  /* Hover zoom/animations removed as per request */
 }
 .work-img--2 { background: #1e2620; }
 .work-img--3 { background: #22201e; }
-.work-card:hover .work-img { transform: scale(1.02); }
 
 .work-placeholder {
   position: absolute;
@@ -527,7 +524,7 @@ em { font-style: italic; color: var(--terra); }
   grid-template-columns: 1fr 1fr;
   gap: 6px;
 }
-.wp-grid div { width: 36px; height: 36px; border-radius: 3px; background: var(--terra); }
+.wp-grid div { width: 36px; height: 36px; border-radius: 3px; background: var(--terra); border-radius: 3px; }
 .wp-grid div:nth-child(even) { background: var(--sage); }
 
 .work-cat {
