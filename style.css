@@ -327,6 +327,24 @@ em { font-style: italic; color: var(--terra); }
   50%       { transform: translate(3%, -4%) rotate(15deg); }
 }
 
+.about-photo {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+.work-img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s var(--ease-out);
+}
+.work-card:hover .work-img img { transform: scale(1.04); }
+
 /* ── ABOUT ── */
 .about { background: var(--white); }
 
