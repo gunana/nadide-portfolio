@@ -5,34 +5,6 @@
 (function () {
   'use strict';
 
-  // ── CUSTOM CURSOR ──────────────────────
-  const cursor = document.createElement('div');
-  cursor.classList.add('cursor');
-  document.body.appendChild(cursor);
-
-  let mouseX = 0, mouseY = 0;
-  let curX = 0, curY = 0;
-
-  document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
-
-  const hoverTargets = 'a, button, .skill-card, .work-card, .btn';
-  document.querySelectorAll(hoverTargets).forEach(el => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-  });
-
-  function animateCursor() {
-    curX += (mouseX - curX) * 0.12;
-    curY += (mouseY - curY) * 0.12;
-    cursor.style.left = curX + 'px';
-    cursor.style.top  = curY + 'px';
-    requestAnimationFrame(animateCursor);
-  }
-  animateCursor();
-
   // ── NAV SCROLL ─────────────────────────
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
